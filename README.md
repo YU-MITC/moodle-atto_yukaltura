@@ -98,6 +98,10 @@ Warning
 Change log of YU Kaltura Media for Atto
 ------
 
+Version 1.4.0R2
+
+* fixed video codec selection scheme in attorecorder.js.
+
 Version 1.4.0
 
 * fixed javascript files based on JSDoc warnings.
