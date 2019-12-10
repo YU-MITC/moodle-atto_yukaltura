@@ -179,7 +179,7 @@ define(['jquery'], function($) {
                     var typeResult = checkFileType(encodeURI(file.type));
                     var sizeResult = checkFileSize();
 
-                    require(['core/str'], function(str) {
+                    require(['core/str', 'core/notification'], function(str, notification) {
                         var strings = [
                             {key: 'wrong_filesize', component: 'local_yumymedia'},
                             {key: 'unsupported_filetype', component: 'local_yumymedia'},
@@ -238,7 +238,7 @@ define(['jquery'], function($) {
                                 $("#type").val(typeResult);
                             }
                             return 0;
-                        });
+                        }).fail(notification.exception);
                         return 0;
                     });
 
