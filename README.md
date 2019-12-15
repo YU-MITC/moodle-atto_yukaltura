@@ -100,7 +100,7 @@ Change log of YU Kaltura Media for Atto
 
 Version 1.4.0R2
 
-* fixed video codec selection scheme in attorecorder.js.
+* fixed video codec selection scheme in attorecorder.js, in order to support the recent versions of Mozilla Firefox.
 
 Version 1.4.0
 
