@@ -25,11 +25,11 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'atto_yukaltura';
-$plugin->version = 2019121500;
-$plugin->release = '1.4.0R2';
+$plugin->version = 2020021400;
+$plugin->release = '1.4.0R3';
 $plugin->maturity = MATURITY_STABLE;
 $plugin->requires = 2015051100;
 $plugin->dependencies = array(
-    'local_yukaltura' => 2019111400,
-    'local_yumymedia' => 2019111400
+    'local_yukaltura' => 2020021400,
+    'local_yumymedia' => 2020021400
 );
