@@ -18,18 +18,18 @@
  * YU Kaltura Media for Atto, version file.
  *
  * @package   atto_yukaltura
- * @copyright (C) 2019 Yamaguchi University <gh-cc@mlex.cc.yamaguchi-u.ac.jp>
+ * @copyright (C) 2019-2020 Yamaguchi University <gh-cc@mlex.cc.yamaguchi-u.ac.jp>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'atto_yukaltura';
-$plugin->version = 2020021400;
-$plugin->release = '1.4.0R3';
+$plugin->version = 2020042900;
+$plugin->release = '1.4.1';
 $plugin->maturity = MATURITY_STABLE;
 $plugin->requires = 2015051100;
 $plugin->dependencies = array(
-    'local_yukaltura' => 2020021400,
-    'local_yumymedia' => 2020021400
+    'local_yukaltura' => 2020042900,
+    'local_yumymedia' => 2020042900
 );
