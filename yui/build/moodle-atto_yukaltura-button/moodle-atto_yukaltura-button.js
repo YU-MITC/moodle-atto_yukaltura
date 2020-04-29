@@ -17,7 +17,7 @@ YUI.add('moodle-atto_yukaltura-button', function (Y, NAME) {
 
 /*
  * @package   atto_yukaltura
- * @copyright (C) 2019 Yamaguchi University <gh-cc@mlex.cc.yamaguchi-u.ac.jp>
+ * @copyright (C) 2019-2020 Yamaguchi University <gh-cc@mlex.cc.yamaguchi-u.ac.jp>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -112,13 +112,14 @@ Y.namespace('M.atto_yukaltura').Button = Y.Base.create('button', Y.M.editor_atto
      * @private
      */
     _getMediaControlName: function() {
-        return(this.get('host').get('elementid') + '_' + MEDIACONTROL);
+        return (this.get('host').get('elementid') + '_' + MEDIACONTROL);
     },
 
     /**
      * Display the atto selector.
      *
      * @method _displaySelector
+     * @param {object} e - object of event source.
      * @param {object} clickedicon - object of clicked button.
      * @private
      */
