@@ -109,6 +109,7 @@ Change log of YU Kaltura Media for Atto
 Version 2.0.0
 
 * fixed copyright statements in various files.
+* fixed various files in order to delete statements using print_error function.
 * fixed atto_selector.php, attorecorder.js, attoselector.js, and attouploader.js, in order to support Kaltura OVP media players (TV Platform studio).
 
 Version 1.5.0
