@@ -15,7 +15,7 @@
 
 /*
  * @package   atto_yukaltura
- * @copyright (C) 2019-2020 Yamaguchi University <gh-cc@mlex.cc.yamaguchi-u.ac.jp>
+ * @copyright (C) 2019-2021 Yamaguchi University <gh-cc@mlex.cc.yamaguchi-u.ac.jp>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -284,6 +284,7 @@ Y.namespace('M.atto_yukaltura').Button = Y.Base.create('button', Y.M.editor_atto
             var filetype = Y.one('#yukaltura_filetype').get('value');
             var naturalWidth = Y.one('#yukaltura_naturalwidth').get('value');
             var naturalHeight = Y.one('#yukaltura_naturalheight').get('value');
+            var playerstudio = Y.one('#yukaltura_playerstudio').get('value');
 
             var day = new Date();
             var timestamp = day.getTime();
@@ -292,7 +293,8 @@ Y.namespace('M.atto_yukaltura').Button = Y.Base.create('button', Y.M.editor_atto
 
             if (entryid !== null && entryid !== '' && kalturahost !== null && kalturahost !== '' &&
                 partnerid !== null && partnerid !== '' && uiconfid !== null && uiconfid !== '' &&
-                width !== null && width !== '' && height !== null && height !== '') {
+                width !== null && width !== '' && height !== null && height !== '' &&
+                playerstudio !== null && playerstudio !== '') {
                 if (filetype == 'image' && naturalWidth > 0 && naturalHeight > 0) {
                     var linkSource = kalturahost + '/p/' + partnerid + '/sp/' + partnerid + '00/thumbnail/entry_id/';
                     linkSource += entryid + '/def_height/' + naturalHeight + '/def_width/' + naturalWidth + '/type/1';
@@ -327,11 +329,20 @@ Y.namespace('M.atto_yukaltura').Button = Y.Base.create('button', Y.M.editor_atto
                     }
 
                 } else {
-                    code += '<iframe src="' + kalturahost + '/p/' + partnerid + '/sp/' + partnerid + '00/';
-                    code += 'embedIframeJs/uiconf_id/' + uiconfid + '/partner_id/' + partnerid + '?';
-                    code += 'iframeembed=true&playerId=kaltura_player_' + timestamp + '&entry_id=' + entryid;
-                    code += '" width="' + width + '" height="' + height + '" allowfullscreen webkitallowfullscreen ';
-                    code += 'mozAllowFullScreen frameborder="0" allow="encrypted-media"></iframe>';
+                    if (playerstudio == 'ovp') {
+                        code += '<iframe type="text/javascript" src="' + kalturahost + '/p/' + partnerid + '/';
+                        code += 'embedPlaykitJs/uiconf_id/' + uiconfid + '?';
+                        code += 'iframeembed=true&entry_id=' + entryid + '" ';
+                        code += 'style="width: ' + width + 'px; height: ' + height + 'px" ';
+                        code += 'allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" allow="encrypted-media">';
+                        code += '</iframe>';
+                    } else {
+	                code += '<iframe src="' + kalturahost + '/p/' + partnerid + '/sp/' + partnerid + '00/';
+                        code += 'embedIframeJs/uiconf_id/' + uiconfid + '/partner_id/' + partnerid + '?';
+                        code += 'iframeembed=true&playerId=kaltura_player_' + timestamp + '&entry_id=' + entryid;
+                        code += '" width="' + width + '" height="' + height + '" allowfullscreen webkitallowfullscreen ';
+                        code += 'mozAllowFullScreen frameborder="0" allow="encrypted-media"></iframe>';
+                    }
                 }
 
                 this.get('host').insertContentAtFocusPoint(code);
@@ -369,6 +380,7 @@ Y.namespace('M.atto_yukaltura').Button = Y.Base.create('button', Y.M.editor_atto
         Y.all('#yukaltura_host').remove();
         Y.all('#yukaltura_partnerid').remove();
         Y.all('#yukaltura_uiconfid').remove();
+        Y.all('#yukaltura_playerstudio').remove();
         Y.all('#yukaltura_width').remove();
         Y.all('#yukaltura_height').remove();
         Y.all('#yukaltura_filetype').remove();
