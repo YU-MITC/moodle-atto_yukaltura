@@ -17,7 +17,7 @@
  * Media Secctor script for kaltura media embed.
  *
  * @package   atto_yukaltura
- * @copyright (C) 2019-2020 Yamaguchi University (gh-cc@mlex.cc.yamaguchi-u.ac.jp)
+ * @copyright (C) 2019-2021 Yamaguchi University (gh-cc@mlex.cc.yamaguchi-u.ac.jp)
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -100,6 +100,10 @@ define(['jquery'], function($) {
                     str = '<input type="hidden" name="yukaltura_height" id="yukaltura_height" value="' + height + '">';
                     element.append(str);
 
+                    var studio = $('#player_studio').val();
+                    str = '<input type="hidden" name="yukaltura_playerstudio" id="yukaltura_playerstudio" value="' + studio + '">';
+                    element.append(str);
+
                     str = '<input type="hidden" name="yukaltura_filetype" id="yukaltura_filetype" value="">';
                     element.append(str);
 
@@ -136,6 +140,7 @@ define(['jquery'], function($) {
                 $('#yukaltura_host', parent.document).remove();
                 $('#yukaltura_partnerid', parent.document).remove();
                 $('#yukaltura_uiconfid', parent.document).remove();
+                $('#yukaltura_playerstudio', parent.document).remove();
                 $('#yukaltura_width', parent.document).remove();
                 $('#yukaltura_height', parent.document).remove();
                 $('#yukaltura_filetype', parent.document).remove();
