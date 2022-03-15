@@ -15,7 +15,7 @@
 
 /*
  * @package   atto_yukaltura
- * @copyright (C) 2019-2021 Yamaguchi University <gh-cc@mlex.cc.yamaguchi-u.ac.jp>
+ * @copyright (C) 2019-2022 Yamaguchi University <gh-cc@mlex.cc.yamaguchi-u.ac.jp>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -281,10 +281,10 @@ Y.namespace('M.atto_yukaltura').Button = Y.Base.create('button', Y.M.editor_atto
             var uiconfid = Y.one('#yukaltura_uiconfid').get('value');
             var width = Y.one('#yukaltura_width').get('value');
             var height = Y.one('#yukaltura_height').get('value');
+            var playerstudio = Y.one('#yukaltura_playerstudio').get('value');
             var filetype = Y.one('#yukaltura_filetype').get('value');
             var naturalWidth = Y.one('#yukaltura_naturalwidth').get('value');
             var naturalHeight = Y.one('#yukaltura_naturalheight').get('value');
-            var playerstudio = Y.one('#yukaltura_playerstudio').get('value');
 
             var day = new Date();
             var timestamp = day.getTime();
