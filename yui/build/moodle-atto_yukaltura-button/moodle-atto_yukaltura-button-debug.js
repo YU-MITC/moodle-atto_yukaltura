@@ -339,7 +339,7 @@ Y.namespace('M.atto_yukaltura').Button = Y.Base.create('button', Y.M.editor_atto
                         code += 'allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" allow="encrypted-media">';
                         code += '</iframe>';
                     } else {
-	                code += '<iframe src="' + kalturahost + '/p/' + partnerid + '/sp/' + partnerid + '00/';
+                        code += '<iframe src="' + kalturahost + '/p/' + partnerid + '/sp/' + partnerid + '00/';
                         code += 'embedIframeJs/uiconf_id/' + uiconfid + '/partner_id/' + partnerid + '?';
                         code += 'iframeembed=true&playerId=kaltura_player_' + timestamp + '&entry_id=' + entryid;
                         code += '" width="' + width + '" height="' + height + '" allowfullscreen webkitallowfullscreen ';
