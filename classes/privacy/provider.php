@@ -24,8 +24,6 @@
 
 namespace atto_yukaltura\privacy;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Privacy Subsystem for atto_yukaltura implementing null_provider.
  *
