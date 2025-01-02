@@ -17,7 +17,7 @@ YUI.add('moodle-atto_yukaltura-button', function (Y, NAME) {
 
 /*
  * @package   atto_yukaltura
- * @copyright (C) 2019-2023 Yamaguchi University <gh-cc@mlex.cc.yamaguchi-u.ac.jp>
+ * @copyright (C) 2019-2025 Yamaguchi University <gh-cc@mlex.cc.yamaguchi-u.ac.jp>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
