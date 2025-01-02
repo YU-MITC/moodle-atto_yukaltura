@@ -101,7 +101,7 @@ Version 3.0.0
 * fixed atto_selector.php, in order to resolve an undefined property issue in a dynamic defined class.
 * fixed atto_selector.php, in order to resolve a media search issue in the Moodle 4.3 and later versions.
 * fixed javascript files, in order to resolve an issue data comparison use "undefined".
-* fixed attorecorder.js and attouploader.js in order to use new setting item  (about maximum data siize).
+* fixed attorecorder.js and attouploader.js in order to use new setting item  (about maximum data size).
 
 Version 2.1.0
 
